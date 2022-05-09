@@ -1,5 +1,12 @@
 # Image-Classification-TF
 
+Image classification using a Inception v3 or Mobilenet model trained on ImageNet images,
+and train a new top layer that can recognize other classes of images.
+
+The top layer receives as input a 2048-dimensional vector (1001-dimensional for Mobilenet) for each image. We train a
+softmax layer on top of this representation. Assuming the softmax layer contains N labels, this corresponds to
+learning N + 2048*N (or 1001*N)  model parameters corresponding to the learned biases and weights.
+
 
 ### Create the virtual environment:
 
